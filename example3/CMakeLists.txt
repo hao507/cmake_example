@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.8.12)
+project(hello)
+add_library(libhello hello.c)
+add_executable(hello main.c)
+target_link_libraries(hello libhello)
+set_target_properties(libhello PROPERTIES OUTPUT_NAME "hello")
